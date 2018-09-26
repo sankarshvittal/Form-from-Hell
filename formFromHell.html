@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="formFromHell.css"/>
+    <script type='text/javascript' src='formFromHell.js'></script>
+</head>
+<body>
+<div id="error-msg"></div>
+<form class="contact_form"  id="contact_form" action="" method="post" name="contact_form" onsubmit="return validate(this);">
+  <ul>
+    <li>
+        <h2>Contact Us</h2>
+        <span class="required_notification">* Denotes Required Field</span>
+    </li>
+    <li>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"  onchange="nameValidate()" required />
+    </li>
+    <li>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email"  onchange="emailValidate()"  required />
+    </li>
+    <li>
+        <label id="id" for="website">Website:</label>
+        <input type="url" name="website" id="id1"   required/>
+    </li>
+    <li>
+       <label for="message">Message:</label>
+       <textarea name="message" id="message" cols="40" rows="6" required ></textarea>
+    </li>
+    <li>
+      <button class="submit" type="submit">Submit Form</button>
+    </li>
+</ul>
+</form>
+</body>
+</html>
